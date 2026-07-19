@@ -1,7 +1,7 @@
 # CLAUDE.md
 
-Personal portfolio site for srosebattles. The site is itself a work sample:
-craft matters more than speed. Every constraint below is deliberate — do not
+Personal portfolio site for Sarah Rose Battles (GitHub handle: srosebattles).
+The site is itself a work sample: craft matters more than speed. Every constraint below is deliberate — do not
 "upgrade" the stack, add tooling, or DRY things out without being asked.
 
 ## Architecture constraints
@@ -82,6 +82,9 @@ domain (`srosebattles.com`) is cut over from the old repo. Therefore:
   ghostwrite it. Placeholder prose is lorem ipsum wrapped in an element with
   `data-todo` (visibly flagged by the stylesheet) plus an HTML
   `<!-- TODO(srosebattles): … -->` comment.
+- The site identity is **Sarah Rose Battles** — page titles, header wordmark,
+  OG tags, JSON-LD. The handle `srosebattles` never appears as visible site
+  text; it exists only inside the GitHub/LinkedIn URLs and the email address.
 - Footer links: GitHub, LinkedIn, email, PDF resume (`resume.pdf`), colophon,
   and the `<quoting-clock>` component. **No Twitter/X links anywhere.**
 - Quote data lives in `assets/quotes.json`, keyed by 96 quarter-hour slots
