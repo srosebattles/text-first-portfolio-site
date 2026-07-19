@@ -156,6 +156,14 @@ a:hover {
   text-decoration-thickness: 0.12em;
 }
 
+code {
+  font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+  font-size: 0.85em;
+  background: var(--color-paper-tint);
+  padding: 0.1em 0.35em;
+  border-radius: 3px;
+}
+
 ::selection {
   background: var(--color-khaki);
   color: var(--color-ink);
