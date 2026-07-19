@@ -69,8 +69,9 @@ no-JS fallback (C.S. Lewis) lives in each page's footer markup.
   **TODO(srosebattles): register at [goatcounter.com](https://www.goatcounter.com)
   and replace the code in the script tag on every page.** It must remain the
   site's only third-party request.
-- **robots.txt** — deny-by-default whitelist. Googlebot/Bingbot are
-  placeholders for the full approved-crawler list.
+- **robots.txt** — deny-by-default whitelist, grouped by category (search,
+  AI, link previews, SEO tools, read-later, archives). Add new crawlers to
+  the matching group; anything unlisted is denied by the catch-all.
 - **resume.pdf** — placeholder; drop in the real file (same name, same path).
 - **Domain cutover** — when `srosebattles.com` moves off the old repo, work
   through the cutover checklist in CLAUDE.md (canonicals, OG URLs, sitemap,
