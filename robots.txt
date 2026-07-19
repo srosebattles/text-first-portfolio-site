@@ -1,0 +1,18 @@
+# Whitelist approach: crawling is denied by default, then approved crawlers
+# are allowed explicitly. A crawler with its own group below ignores the
+# catch-all group entirely.
+#
+# TODO(srosebattles): Googlebot and Bingbot are placeholders — replace with
+# the full approved-crawler list.
+
+User-agent: *
+Disallow: /
+
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+# Update this URL at domain cutover (see CLAUDE.md).
+Sitemap: https://srosebattles.github.io/text-first-portfolio-site/sitemap.xml
