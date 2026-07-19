@@ -253,6 +253,14 @@ main {
   padding-block: var(--space-xl) 0;
 }
 
+/* Statement — the home page's h1 is the positioning statement */
+.statement {
+  font-size: var(--step-2);
+  font-weight: 560;
+  line-height: 1.25;
+  margin-block-end: var(--space-l);
+}
+
 /* Standfirst — the big opening line on every page */
 .standfirst {
   font-size: var(--step-1);
