@@ -1,0 +1,45 @@
+{
+  "$comment": "Literary clock data for <quoting-clock>. Keys are the 96 quarter-hour slots, 'HH:MM' in 24-hour time. Entry schema: { quote, title, author } — store the quote without surrounding quotation marks; the component supplies them. Slots may be sparse: missing slots fall back to the nearest populated one. TODO(srosebattles): curate the full 96 slots and verify wording against the source texts (see README).",
+  "slots": {
+    "00:00": {
+      "quote": "Once upon a midnight dreary, while I pondered, weak and weary, / Over many a quaint and curious volume of forgotten lore—",
+      "title": "The Raven",
+      "author": "Edgar Allan Poe"
+    },
+    "01:00": {
+      "quote": "Expect the first to-morrow, when the bell tolls One.",
+      "title": "A Christmas Carol",
+      "author": "Charles Dickens"
+    },
+    "07:15": {
+      "quote": "He was a late riser, as a rule, and as the clock on the mantelpiece showed me that it was only a quarter-past seven, I blinked up at him in some surprise.",
+      "title": "The Adventures of Sherlock Holmes",
+      "author": "Arthur Conan Doyle"
+    },
+    "11:30": {
+      "quote": "Phileas Fogg, having shut the door of his house at half-past eleven, and having put his right foot before his left five hundred and seventy-five times, and his left foot before his right five hundred and seventy-six times, reached the Reform Club.",
+      "title": "Around the World in Eighty Days",
+      "author": "Jules Verne"
+    },
+    "12:00": {
+      "quote": "It was precisely twelve o’clock; twelve by Big Ben; whose stroke was wafted over the northern part of London; blent with that of other clocks, mixed in a thin ethereal way with the clouds and wisps of smoke, and died up there among the seagulls.",
+      "title": "Mrs Dalloway",
+      "author": "Virginia Woolf"
+    },
+    "16:30": {
+      "quote": "Under certain circumstances there are few hours in life more agreeable than the hour dedicated to the ceremony known as afternoon tea.",
+      "title": "The Portrait of a Lady",
+      "author": "Henry James"
+    },
+    "18:00": {
+      "quote": "It’s always six o’clock now.",
+      "title": "Alice’s Adventures in Wonderland",
+      "author": "Lewis Carroll"
+    },
+    "20:30": {
+      "quote": "Left Munich at 8:35 P. M., on 1st May, arriving at Vienna early next morning; should have arrived at 6:46, but train was an hour late.",
+      "title": "Dracula",
+      "author": "Bram Stoker"
+    }
+  }
+}

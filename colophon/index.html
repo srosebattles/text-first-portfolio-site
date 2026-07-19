@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Colophon — srosebattles</title>
+  <meta name="description" content="How this site is made: no framework, no build step, typed-but-never-compiled JavaScript, self-hosted Literata, and analytics that don't follow you around.">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#f7f2e7" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#1a1914" media="(prefers-color-scheme: dark)">
+  <link rel="canonical" href="https://srosebattles.github.io/text-first-portfolio-site/colophon/">
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="../assets/fonts/Literata-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="../assets/site.css">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="srosebattles">
+  <meta property="og:title" content="Colophon — srosebattles">
+  <meta property="og:description" content="How this site is made: no framework, no build step, typed-but-never-compiled JavaScript, self-hosted Literata, and analytics that don't follow you around.">
+  <meta property="og:url" content="https://srosebattles.github.io/text-first-portfolio-site/colophon/">
+  <meta property="og:image" content="https://srosebattles.github.io/text-first-portfolio-site/assets/og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Text on warm paper: srosebattles.">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Colophon — srosebattles">
+  <meta name="twitter:description" content="How this site is made: no framework, no build step, typed-but-never-compiled JavaScript, self-hosted Literata, and analytics that don't follow you around.">
+  <meta name="twitter:image" content="https://srosebattles.github.io/text-first-portfolio-site/assets/og.png">
+  <script type="module" src="../assets/quoting-clock.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <p class="site-name"><a href="../">srosebattles</a></p>
+    <nav class="site-nav" aria-label="Site">
+      <ul>
+        <li><a href="../#work">Work</a></li>
+        <li><a href="./" aria-current="page">Colophon</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+    <!-- TODO(srosebattles): this page is drafted for real from the repo —
+         give it an editing pass in your own voice. -->
+    <article>
+      <h1>Colophon</h1>
+      <p class="standfirst">How this site is made, and why it is made this way.</p>
+
+      <section>
+        <h2 id="no-framework">No framework, no build</h2>
+        <p>This site is plain HTML, one stylesheet, and one small JavaScript
+        file, written by hand. There is no framework, no bundler, no
+        preprocessor, no npm — nothing to install and nothing to compile. What
+        is in the <a href="https://github.com/srosebattles/text-first-portfolio-site">repository</a>
+        is exactly what your browser receives. Each page is a standalone
+        document; the shared header and footer are duplicated across pages on
+        purpose, because at five pages, duplication is simpler than any
+        machinery for avoiding it.</p>
+        <p>The one piece of JavaScript — the clock in the footer — is typed
+        but never compiled: plain JS with <code>// @ts-check</code> and JSDoc
+        annotations, so the editor checks types while the browser runs the
+        file as-is. Every page works fully with JavaScript disabled; scripts
+        only upgrade what is already there.</p>
+      </section>
+
+      <section>
+        <h2 id="typography">Typography</h2>
+        <p>The site is all text, so the type does all the work. Everything is
+        set in <a href="https://github.com/googlefonts/literata">Literata</a>,
+        a serif designed for long-form reading on screens, used here as a
+        single variable font with optical sizing — the same file supplies text
+        and display cuts. It is self-hosted as a latin-subset woff2, licensed
+        under the SIL Open Font License, with a serif system stack standing in
+        while it loads. The scale is fluid, the measure is held to a readable
+        65–75 characters, and there are no photographs, no illustrations, and
+        no icons anywhere.</p>
+      </section>
+
+      <section>
+        <h2 id="color">Color &amp; theming</h2>
+        <p>Colors live as design tokens at the top of the stylesheet: warm
+        off-white paper, near-black ink, and a khaki-and-olive accent family,
+        with every text color meeting WCAG AA contrast. Dark mode follows your
+        system preference and is implemented entirely by re-assigning the
+        tokens — the accent shifts toward a desaturated sage rather than a
+        muddy olive. Animation respects your reduced-motion preference, which
+        is easy to do because there is almost none of it.</p>
+      </section>
+
+      <section>
+        <h2 id="clock">The clock</h2>
+        <p>The footer tells the time in literature: a small custom element
+        rounds the clock to the nearest quarter-hour and quotes a book that
+        mentions it. Without JavaScript it still tells you something true
+        about time, via C.S. Lewis. It has its own
+        <a href="../work/quoting-clock/">case study</a>.</p>
+      </section>
+
+      <section>
+        <h2 id="analytics">Analytics</h2>
+        <p>Visits are counted with <a href="https://www.goatcounter.com/">GoatCounter</a>,
+        chosen because it is open source and counts visits without cookies,
+        without profiles, and without following you to other sites — a tally,
+        not a tracker. Its script is the only third-party request this site
+        makes.</p>
+      </section>
+
+      <section>
+        <h2 id="hosting">Hosting</h2>
+        <p>The site is static files served by
+        <a href="https://pages.github.com/">GitHub Pages</a>, deployed by
+        pushing to the repository. Previewing locally takes one line of
+        Python and no dependencies: <code>python3 -m http.server</code>.</p>
+      </section>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <quoting-clock>
+      <figure>
+        <blockquote>“. . . if, I say, she had got into another world, I should
+        not be at all surprised to find that the other world had a separate
+        time all its own;”</blockquote>
+        <figcaption>— C.S. Lewis, <cite>The Lion, the Witch and the Wardrobe</cite></figcaption>
+      </figure>
+    </quoting-clock>
+    <nav aria-label="Elsewhere">
+      <ul>
+        <li><a href="https://github.com/srosebattles">GitHub</a></li>
+        <li><a href="https://www.linkedin.com/in/srosebattles">LinkedIn</a></li>
+        <li><a href="mailto:srosebattles@gmail.com">srosebattles@gmail.com</a></li>
+        <li><a href="../resume.pdf">Résumé (PDF)</a></li>
+        <li><a href="./">Colophon</a></li>
+      </ul>
+    </nav>
+    <p class="fineprint">Set in Literata. Hand-built — no framework, no build step.</p>
+  </footer>
+
+  <!-- GoatCounter — the site's only third-party request.
+       TODO(srosebattles): register at goatcounter.com and replace the site code. -->
+  <script data-goatcounter="https://SROSEBATTLES_TODO.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
+</body>
+</html>
