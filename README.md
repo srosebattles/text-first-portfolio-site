@@ -1,14 +1,13 @@
 # text-first-portfolio-site
 
-A text-first personal portfolio. No framework, no build step, no npm — plain
-HTML, one stylesheet, one small typed-but-never-compiled JS file. The site is
-itself a work sample; the constraints that shape it are recorded in
-[CLAUDE.md](CLAUDE.md) and explained on the [colophon](colophon/index.html).
+My personal portfolio: plain HTML, one stylesheet, and one small JavaScript
+file. No framework, no build step, nothing to install. The
+[colophon](colophon/index.html) tells the story of how it's put together;
+`CLAUDE.md` holds the working constraints for AI-assisted coding sessions.
 
-Deployed on GitHub Pages at
-`https://srosebattles.github.io/text-first-portfolio-site/` (custom domain
-cutover comes later — **no CNAME yet**; see the cutover checklist in
-CLAUDE.md).
+Live at `https://srosebattles.github.io/text-first-portfolio-site/` until
+`srosebattles.com` cuts over from the old repo. (No CNAME file until then —
+see the cutover notes below.)
 
 ## Structure
 
@@ -24,7 +23,7 @@ assets/
   site.css                     the one stylesheet: tokens → base → components
   quoting-clock.js             the one script: <quoting-clock> custom element
   quotes.json                  literary-clock data (96 quarter-hour slots)
-  favicon.svg                  text-only mark, follows color scheme
+  favicon.svg                  SRB monogram, follows the color scheme
   og.png                       Open Graph card, 1200x630
   fonts/                       Literata variable woff2 (latin) + OFL license
 resume.pdf                     placeholder — replace with the real file
@@ -39,43 +38,45 @@ sitemap.xml                    hand-maintained
 python3 -m http.server
 ```
 
-Then open <http://localhost:8000>. No dependencies, nothing to install.
+Then open <http://localhost:8000>. That's the whole toolchain.
 
 ## Adding a page
 
-1. Copy the nearest existing page (same directory depth — relative paths to
-   `assets/` differ by depth).
-2. Update `<title>`, meta description, canonical URL, and the `og:`/`twitter:`
-   tags.
+1. Copy the nearest existing page (same directory depth — the relative paths
+   to `assets/` differ by depth).
+2. Update `<title>`, the meta description, the canonical URL, and the
+   `og:`/`twitter:` tags.
 3. The header, footer, and GoatCounter snippet are duplicated by hand on
-   every page — if you change a shared block, change it **everywhere**.
+   every page — a change to a shared block means touching every page.
 4. Add the page to `sitemap.xml`.
 
 ## The quoting clock
 
 `assets/quotes.json` holds one entry per quarter-hour slot, keyed `"HH:MM"`
-(24-hour): `{ "quote": "...", "title": "...", "author": "..." }`. Store quotes
-without surrounding quotation marks — the component adds them. Slots may be
-sparse; missing slots fall back to the nearest populated one.
+(24-hour): `{ "quote": "...", "title": "...", "author": "..." }`. Quotes are
+stored without surrounding quotation marks — the component adds them. Slots
+can be sparse; a missing slot borrows from the nearest populated one.
 
-**TODO(srosebattles): curate the full 96 slots.** Eight public-domain samples
-are in place; verify their wording against the source texts as you go. The
-no-JS fallback (C.S. Lewis) lives in each page's footer markup.
+TODO: curate the full 96 slots. Eight public-domain samples are in place;
+their wording should be double-checked against the source texts along the
+way. The no-JS fallback (the C.S. Lewis quote) lives in each page's footer
+markup, not in the JSON.
 
 ## Maintenance notes
 
 - **sitemap.xml** — update `lastmod` whenever a page's content changes.
-- **GoatCounter** — the site code is `SROSEBATTLES_TODO`.
-  **TODO(srosebattles): register at [goatcounter.com](https://www.goatcounter.com)
-  and replace the code in the script tag on every page.** It must remain the
-  site's only third-party request.
+- **GoatCounter** — TODO: register at
+  [goatcounter.com](https://www.goatcounter.com) and swap the
+  `SROSEBATTLES_TODO` site code in the snippet on every page. Its script is
+  deliberately the site's only third-party request.
 - **robots.txt** — deny-by-default whitelist, grouped by category (search,
-  AI, link previews, SEO tools, read-later, archives). Add new crawlers to
-  the matching group; anything unlisted is denied by the catch-all.
-- **resume.pdf** — placeholder; drop in the real file (same name, same path).
-- **Domain cutover** — when `srosebattles.com` moves off the old repo, work
-  through the cutover checklist in CLAUDE.md (canonicals, OG URLs, sitemap,
-  robots, the 404 page's absolute URLs, then add CNAME).
-- **Placeholder copy** — anything visibly flagged "to do · placeholder copy"
-  (`data-todo`) or marked `TODO(srosebattles)` in comments is waiting on
-  prose written by a human, in their own voice.
+  AI, link previews, SEO tools, read-later, archives). New crawlers go in
+  the matching group; anything unlisted stays blocked.
+- **resume.pdf** — placeholder; swap in the real file at the same path.
+- **Domain cutover** — the canonicals, OG URLs, sitemap, robots sitemap
+  line, and every URL in `404.html` point at the github.io address. When
+  `srosebattles.com` moves over: update them all, then add the CNAME file.
+  (The full checklist is in `CLAUDE.md`.)
+- **Placeholder copy** — anything flagged “to do · placeholder copy” on the
+  page, or `TODO` in a comment, still needs real writing before it counts
+  as done.
