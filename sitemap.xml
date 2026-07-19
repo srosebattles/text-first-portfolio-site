@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Maintained by hand: update <lastmod> when a page changes, and update all
+     <loc> values at domain cutover. See README. -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://srosebattles.github.io/text-first-portfolio-site/</loc>
+    <lastmod>2026-07-19</lastmod>
+  </url>
+  <url>
+    <loc>https://srosebattles.github.io/text-first-portfolio-site/work/jira-refinement-tool/</loc>
+    <lastmod>2026-07-19</lastmod>
+  </url>
+  <url>
+    <loc>https://srosebattles.github.io/text-first-portfolio-site/work/llm-game-scaffolds/</loc>
+    <lastmod>2026-07-19</lastmod>
+  </url>
+  <url>
+    <loc>https://srosebattles.github.io/text-first-portfolio-site/work/quoting-clock/</loc>
+    <lastmod>2026-07-19</lastmod>
+  </url>
+  <url>
+    <loc>https://srosebattles.github.io/text-first-portfolio-site/colophon/</loc>
+    <lastmod>2026-07-19</lastmod>
+  </url>
+</urlset>
