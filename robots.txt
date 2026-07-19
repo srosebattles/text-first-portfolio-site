@@ -6,8 +6,6 @@
 # engines, AI crawlers and assistants, link-preview fetchers, SEO tools,
 # read-later services, and web archives — are welcome. Anything not listed
 # falls through to the deny-all group at the end of the file.
-#
-# A crawler with its own group below ignores the catch-all group entirely.
 # =============================================================================
 
 # Update this URL at domain cutover (see CLAUDE.md).
