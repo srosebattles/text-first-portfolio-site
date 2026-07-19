@@ -328,11 +328,15 @@ main {
   margin-block-end: 0.2rem;
 }
 
-/* Site footer */
+/* Site footer. NB: the measure is in ch, so the container must keep the
+   body font-size — only inner text scales down. */
 .site-footer {
   border-block-start: 1px solid var(--color-rule);
   margin-block-start: var(--space-l);
   padding-block: var(--space-l) var(--space-xl);
+}
+
+.site-footer nav {
   font-size: var(--step--1);
 }
 
@@ -346,6 +350,7 @@ main {
 }
 
 .fineprint {
+  font-size: var(--step--1);
   color: var(--color-ink-muted);
   margin-block: var(--space-m) 0;
 }
@@ -357,6 +362,7 @@ quoting-clock {
 }
 
 quoting-clock .clock-time {
+  font-size: var(--step--1);
   font-variant-caps: all-small-caps;
   letter-spacing: 0.07em;
   color: var(--color-accent-ink);
@@ -380,6 +386,7 @@ quoting-clock blockquote {
 }
 
 quoting-clock figcaption {
+  font-size: var(--step--1);
   color: var(--color-ink-muted);
   margin-block-start: 0.35rem;
 }
