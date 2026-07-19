@@ -15,9 +15,9 @@ see the cutover notes below.)
 index.html                     home: positioning, about, case-study index
 404.html                       custom not-found page (all URLs absolute)
 work/
-  jira-refinement-tool/        case study (prose TODO)
-  llm-game-scaffolds/          case study (prose TODO)
-  quoting-clock/               case study (prose TODO)
+  project-1/                   case study placeholder (name + prose TODO)
+  project-2/                   case study placeholder (name + prose TODO)
+  project-3/                   case study placeholder (name + prose TODO)
 colophon/                      how the site is made (drafted, needs edit pass)
 assets/
   site.css                     the one stylesheet: tokens → base → components
