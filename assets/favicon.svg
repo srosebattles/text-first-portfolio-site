@@ -1,16 +1,16 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-  <!-- Text-only mark on the site's token colors; follows the color scheme. -->
+  <!-- SRB monogram on the site's token colors; follows the color scheme. -->
   <style>
     .bg { fill: #f7f2e7; }
     .fg { fill: #22201a; }
-    .dot { fill: #55611f; }
+    .accent { fill: #b4a254; }
     @media (prefers-color-scheme: dark) {
       .bg { fill: #1a1914; }
       .fg { fill: #eae3d2; }
-      .dot { fill: #b9be8c; }
+      .accent { fill: #6e6f4c; }
     }
   </style>
   <rect class="bg" width="64" height="64" rx="10"/>
-  <text x="30" y="47" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="46" class="fg">s</text>
-  <circle class="dot" cx="48" cy="43" r="4.5"/>
+  <text x="32" y="42" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="26" font-weight="700" class="fg">SRB</text>
+  <rect class="accent" x="17" y="49" width="30" height="3"/>
 </svg>
