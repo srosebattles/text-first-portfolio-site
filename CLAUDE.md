@@ -78,7 +78,7 @@ domain (`srosebattles.com`) is cut over from the old repo. Therefore:
 
 ## Content rules
 
-- Case-study prose is written by the site owner, in their own voice. Never
+- Case-study prose is written by the site owner, in her own voice. Never
   ghostwrite it. Placeholder prose is lorem ipsum wrapped in an element with
   `data-todo` (visibly flagged by the stylesheet) plus an HTML
   `<!-- TODO(srosebattles): … -->` comment.
